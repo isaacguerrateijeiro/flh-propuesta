@@ -342,9 +342,7 @@
     .int-hub span { font-size: 22px; }
 
     /* Investment table: hide Plazo column, keep Módulo+Fase+Coste */
-    .inv-table thead th:nth-child(3),
-    .inv-table tbody td:nth-child(3),
-    .inv-table tfoot td:nth-child(3) { display: none; }
+    .col-plazo { display: none; }
     .inv-table td { padding: 10px 12px; font-size: 13px; }
     .inv-table thead th { padding: 12px; font-size: 11px; }
 
@@ -888,38 +886,38 @@
 
   <table class="inv-table">
     <thead>
-      <tr><th>Módulo / Entregable</th><th>Fase</th><th>Plazo</th><th>Coste</th></tr>
+      <tr><th>Módulo / Entregable</th><th>Fase</th><th class="col-plazo">Plazo</th><th>Coste</th></tr>
     </thead>
     <tbody>
-      <tr><td>Setup inicial: verificación Meta Business, BSP, número WhatsApp, templates</td><td><span class="tag tag-green">F1</span></td><td>Semanas 1–2</td><td class="num">1.650 €</td></tr>
-      <tr><td>Diseño de flujos conversacionales y UX del bot (menús, categorías, carrito, pago)</td><td><span class="tag tag-green">F1</span></td><td>Semanas 1–3</td><td class="num">2.200 €</td></tr>
-      <tr><td>Desarrollo del middleware Node.js (orquestación, sesiones, lógica del bot)</td><td><span class="tag tag-green">F1</span></td><td>Semanas 2–5</td><td class="num">3.850 €</td></tr>
-      <tr><td>Integración ERP (SFTP/API): catálogo, stock, órdenes, historial de cliente</td><td><span class="tag tag-green">F1</span></td><td>Semanas 3–6</td><td class="num">3.300 €</td></tr>
-      <tr><td>Integración pasarela de pago: análisis banca local (Azul/Cardnet) y desarrollo del conector seleccionado</td><td><span class="tag tag-green">F1</span></td><td>Semanas 4–6</td><td class="num">1.925 €</td></tr>
-      <tr><td>Integración Zendesk: tickets automáticos, historial, traspaso bot↔agente</td><td><span class="tag tag-green">F1</span></td><td>Semanas 5–7</td><td class="num">2.200 €</td></tr>
-      <tr><td>Notificaciones proactivas (estados de pedido vía Azure Service Bus)</td><td><span class="tag tag-green">F1</span></td><td>Semanas 6–7</td><td class="num">1.650 €</td></tr>
-      <tr><td>Despliegue Azure, CI/CD, monitorización y seguridad</td><td><span class="tag tag-green">F1</span></td><td>Semanas 7–8</td><td class="num">1.375 €</td></tr>
-      <tr><td>QA, testing de flujos, testing de pagos (sandbox) y correcciones</td><td><span class="tag tag-green">F1</span></td><td>Semanas 8–9</td><td class="num">1.375 €</td></tr>
-      <tr><td>Formación al equipo Farmacias Los Hidalgos (Zendesk, gestión de tickets, configuración)</td><td><span class="tag tag-green">F1</span></td><td>Semana 10</td><td class="num">660 €</td></tr>
-      <tr><td colspan="2" style="font-weight:700;color:var(--slate);">TOTAL FASE 1 (MVP)</td><td style="font-weight:700;color:var(--slate);">8–10 semanas</td><td class="num" style="font-weight:700;">17.600 €</td></tr>
+      <tr><td>Setup inicial: verificación Meta Business, BSP, número WhatsApp, templates</td><td><span class="tag tag-green">F1</span></td><td class="col-plazo">Semanas 1–2</td><td class="num">1.650 €</td></tr>
+      <tr><td>Diseño de flujos conversacionales y UX del bot (menús, categorías, carrito, pago)</td><td><span class="tag tag-green">F1</span></td><td class="col-plazo">Semanas 1–3</td><td class="num">2.200 €</td></tr>
+      <tr><td>Desarrollo del middleware Node.js (orquestación, sesiones, lógica del bot)</td><td><span class="tag tag-green">F1</span></td><td class="col-plazo">Semanas 2–5</td><td class="num">3.850 €</td></tr>
+      <tr><td>Integración ERP (SFTP/API): catálogo, stock, órdenes, historial de cliente</td><td><span class="tag tag-green">F1</span></td><td class="col-plazo">Semanas 3–6</td><td class="num">3.300 €</td></tr>
+      <tr><td>Integración pasarela de pago: análisis banca local (Azul/Cardnet) y desarrollo del conector seleccionado</td><td><span class="tag tag-green">F1</span></td><td class="col-plazo">Semanas 4–6</td><td class="num">1.925 €</td></tr>
+      <tr><td>Integración Zendesk: tickets automáticos, historial, traspaso bot↔agente</td><td><span class="tag tag-green">F1</span></td><td class="col-plazo">Semanas 5–7</td><td class="num">2.200 €</td></tr>
+      <tr><td>Notificaciones proactivas (estados de pedido vía Azure Service Bus)</td><td><span class="tag tag-green">F1</span></td><td class="col-plazo">Semanas 6–7</td><td class="num">1.650 €</td></tr>
+      <tr><td>Despliegue Azure, CI/CD, monitorización y seguridad</td><td><span class="tag tag-green">F1</span></td><td class="col-plazo">Semanas 7–8</td><td class="num">1.375 €</td></tr>
+      <tr><td>QA, testing de flujos, testing de pagos (sandbox) y correcciones</td><td><span class="tag tag-green">F1</span></td><td class="col-plazo">Semanas 8–9</td><td class="num">1.375 €</td></tr>
+      <tr><td>Formación al equipo Farmacias Los Hidalgos (Zendesk, gestión de tickets, configuración)</td><td><span class="tag tag-green">F1</span></td><td class="col-plazo">Semana 10</td><td class="num">660 €</td></tr>
+      <tr><td colspan="2" style="font-weight:700;color:var(--slate);">TOTAL FASE 1 (MVP)</td><td class="col-plazo" style="font-weight:700;color:var(--slate);">8–10 semanas</td><td class="num" style="font-weight:700;">17.600 €</td></tr>
       <tr><td colspan="4" style="padding:6px;background:transparent;"></td></tr>
-      <tr><td>Recompra rápida + recordatorios inteligentes por producto</td><td><span class="tag tag-orange">F2</span></td><td rowspan="6" style="vertical-align:middle;font-weight:600;color:var(--slate);">6–8 semanas</td><td class="num">1.650 €</td></tr>
+      <tr><td>Recompra rápida + recordatorios inteligentes por producto</td><td><span class="tag tag-orange">F2</span></td><td class="col-plazo" rowspan="6" style="vertical-align:middle;font-weight:600;color:var(--slate);">6–8 semanas</td><td class="num">1.650 €</td></tr>
       <tr><td>Gestión de recetas (envío foto, validación agente, flujo aprobación)</td><td><span class="tag tag-orange">F2</span></td><td class="num">2.200 €</td></tr>
       <tr><td>Campañas broadcast: segmentación, templates marketing, programación</td><td><span class="tag tag-orange">F2</span></td><td class="num">1.375 €</td></tr>
       <tr><td>Bot IA avanzado (LLM integrado, contexto farmacéutico, FAQs enriquecidas)</td><td><span class="tag tag-orange">F2</span></td><td class="num">2.750 €</td></tr>
       <tr><td>Integración programa de fidelización + CSAT automatizado</td><td><span class="tag tag-orange">F2</span></td><td class="num">2.200 €</td></tr>
       <tr><td>Historial de pedidos en chat + Zendesk Explore dashboards</td><td><span class="tag tag-orange">F2</span></td><td class="num">1.375 €</td></tr>
-      <tr><td colspan="2" style="font-weight:700;color:var(--slate);">TOTAL FASE 2</td><td style="font-weight:700;color:var(--slate);">6–8 semanas</td><td class="num" style="font-weight:700;">12.100 €</td></tr>
+      <tr><td colspan="2" style="font-weight:700;color:var(--slate);">TOTAL FASE 2</td><td class="col-plazo" style="font-weight:700;color:var(--slate);">6–8 semanas</td><td class="num" style="font-weight:700;">12.100 €</td></tr>
       <tr><td colspan="4" style="padding:6px;background:transparent;"></td></tr>
-      <tr><td>WhatsApp B2B: pedidos corporativos, notificaciones de facturación/saldo</td><td><span class="tag tag-blue">F3</span></td><td rowspan="5" style="vertical-align:middle;font-weight:600;color:var(--slate);">8–12 semanas</td><td class="num">4.400 €</td></tr>
+      <tr><td>WhatsApp B2B: pedidos corporativos, notificaciones de facturación/saldo</td><td><span class="tag tag-blue">F3</span></td><td class="col-plazo" rowspan="5" style="vertical-align:middle;font-weight:600;color:var(--slate);">8–12 semanas</td><td class="num">4.400 €</td></tr>
       <tr><td>Integración web e-commerce ↔ WhatsApp (recuperación carritos abandonados)</td><td><span class="tag tag-blue">F3</span></td><td class="num">2.750 €</td></tr>
       <tr><td>CRM/CDP unificado y dashboard 360° del cliente (web + WhatsApp)</td><td><span class="tag tag-blue">F3</span></td><td class="num">5.500 €</td></tr>
       <tr><td>WhatsApp como canal OTP / autenticación para Portal B2B</td><td><span class="tag tag-blue">F3</span></td><td class="num">1.375 €</td></tr>
       <tr><td>Analytics avanzado: atribución por canal, LTV, segmentación predictiva</td><td><span class="tag tag-blue">F3</span></td><td class="num">2.200 €</td></tr>
-      <tr><td colspan="2" style="font-weight:700;color:var(--slate);">TOTAL FASE 3</td><td style="font-weight:700;color:var(--slate);">8–12 semanas</td><td class="num" style="font-weight:700;">16.500 €</td></tr>
+      <tr><td colspan="2" style="font-weight:700;color:var(--slate);">TOTAL FASE 3</td><td class="col-plazo" style="font-weight:700;color:var(--slate);">8–12 semanas</td><td class="num" style="font-weight:700;">16.500 €</td></tr>
     </tbody>
     <tfoot>
-      <tr><td colspan="2">TOTAL PROYECTO (Fase 1 + 2 + 3)</td><td>~26–30 semanas</td><td class="num">46.200 €</td></tr>
+      <tr><td colspan="2">TOTAL PROYECTO (Fase 1 + 2 + 3)</td><td class="col-plazo">~26–30 semanas</td><td class="num">46.200 €</td></tr>
     </tfoot>
   </table>
 
