@@ -43,6 +43,9 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+// Assets are public (logos needed on the login page)
+app.use('/assets', express.static(path.join(__dirname, 'public', 'assets')));
+
 app.use(requireAuth, express.static(path.join(__dirname, 'public')));
 
 app.get('*', requireAuth, (req, res) => {
